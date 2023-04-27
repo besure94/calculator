@@ -23,4 +23,9 @@ const b = subtract(number1, number2);
 const c = multiply(number1, number2);
 const d = divide(number1, number2);
 
-window.alert("The addition of your numbers equals: " + a + "." + " The subtraction of your numbers equals: " + b + "." + " The multiplication of your numbers equals: " + c + "." + " The division of your numbers equals: " + d + ".");
+let sumString = number1 + " + " + number2 + " = " + a;
+let subString = number1 + " - " + number2 + " = " + b;
+let multString = number1 + " * " + number2 + " = " + c;
+let divString = number1 + " / " + number2 + " = " + d;
+
+window.alert(sumString + ", " + subString + ", " + multString + ", " + divString);
