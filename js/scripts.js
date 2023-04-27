@@ -4,8 +4,8 @@ function add(number1, number2) {
 }
 
 // user interface logic
-let number1 = parseInt(prompt("Enter a number:"));
-let number2 = parseInt(prompt("Enter another number:"));
+const number1 = parseInt(prompt("Enter a number:"));
+const number2 = parseInt(prompt("Enter another number:"));
 // const sum = add(number1, number2);
 
 window.alert("The addition of your numbers equals: " + add(number1, number2));
