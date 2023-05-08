@@ -1,31 +1,40 @@
-// business logic
-function add(number1, number2) {
-	return number1 + number2;
+function add(num1, numb2) {
+	return num1 + num2;
 }
 
-function subtract(number1, number2) {
-	return number1 - number2;
+function subtract(num1, num2) {
+	return num1 - num2;
 }
 
-function multiply(number1, number2) {
-	return number1 * number2;
+function multiply(num1, num2) {
+	return num1 * num2;
 }
 
-function divide(number1, number2) {
-	return number1 / number2;
+function divide(num1, num2) {
+	return num1 / num2;
 }
 
-// user interface logic
-const number1 = parseInt(prompt("Enter a number:"));
-const number2 = parseInt(prompt("Enter another number:"));
-const a = add(number1, number2);
-const b = subtract(number1, number2);
-const c = multiply(number1, number2);
-const d = divide(number1, number2);
+function handleCalculation(event) {
+	event.preventDefault();
+	const num1 = parseInt(document.querySelector("input#input1").value);
+	const num2 = parseInt(document.querySelector("input#input2").value);
+	const operator = document.querySelector("input[name='operator']:checked").value;
 
-let sumString = number1 + " + " + number2 + " = " + a;
-let subString = number1 + " - " + number2 + " = " + b;
-let multString = number1 + " * " + number2 + " = " + c;
-let divString = number1 + " / " + number2 + " = " + d;
+	let result;
+	if (operator === "add") {
+		result = add(num1, num2);
+	} else if (operator === "subtract") {
+		result = subtract(num1, num2);
+	} else if (operator === multiply) {
+		result = multiply(num1, num2);
+	} else if (operator === "divide") {
+		result = divide(num1, num2);
+	}
 
-window.alert(sumString + ", " + subString + ", " + multString + ", " + divString);
+	document.getElementById("output").innerText = result;
+}
+
+window.addEventListener("load", function(){
+	const form = document.getElementById("calculator");
+	form.addEventListener("submit", handleCalculation);
+});
