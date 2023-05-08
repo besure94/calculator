@@ -1,4 +1,4 @@
-function add(num1, numb2) {
+function add(num1, num2) {
 	return num1 + num2;
 }
 
@@ -25,7 +25,7 @@ function handleCalculation(event) {
 		result = add(num1, num2);
 	} else if (operator === "subtract") {
 		result = subtract(num1, num2);
-	} else if (operator === multiply) {
+	} else if (operator === "multiply") {
 		result = multiply(num1, num2);
 	} else if (operator === "divide") {
 		result = divide(num1, num2);
